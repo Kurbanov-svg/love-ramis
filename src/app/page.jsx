@@ -9,6 +9,8 @@ import HeroBefore from "../components/hero5/HeroBefore";
 import Slider from "../components/slider/Slider";
 import HeroVideo from "../components/heroVideo/HeroVideo";
 import ChatLetter from "../components/ChatLetter/ChatLetter";
+import HeroModalVideo from "../components/heroModalVideo/HeroModalVideo";
+import FooterChat from "../components/footerChat/FooterChat";
 export default function Home() {
   const audioRef = useRef(null);
   useEffect(() => {
@@ -42,8 +44,10 @@ export default function Home() {
       <Slider />
       <Four />
       <HeroAfter />
+      <HeroModalVideo />
       <Hero />
       <HeroBefore />
+      <FooterChat />
     </div>
   );
 }
