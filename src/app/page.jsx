@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 import Banner from "../components/hero1/Banner";
 import Four from "../components/hero2/Four";
 import Hero from "../components/hero3/Hero";
+import HeroAfter from "../components/hero4/HeroAfter";
+import HeroBefore from "../components/hero5/HeroBefore";
 export default function Home() {
   const audioRef = useRef(null);
   useEffect(() => {
@@ -34,6 +36,8 @@ export default function Home() {
       <Banner />
       <Hero />
       <Four />
+      <HeroAfter />
+      <HeroBefore />
     </div>
   );
 }
