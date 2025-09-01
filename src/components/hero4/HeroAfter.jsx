@@ -9,6 +9,7 @@ const HeroAfter = () => {
         alt="love me"
         width={475}
         height={630}
+        priority={true}
       />
     </div>
   );
