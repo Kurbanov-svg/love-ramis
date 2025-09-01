@@ -7,6 +7,8 @@ import Hero from "../components/hero3/Hero";
 import HeroAfter from "../components/hero4/HeroAfter";
 import HeroBefore from "../components/hero5/HeroBefore";
 import Slider from "../components/slider/Slider";
+import HeroVideo from "../components/heroVideo/HeroVideo";
+import ChatLetter from "../components/ChatLetter/ChatLetter";
 export default function Home() {
   const audioRef = useRef(null);
   useEffect(() => {
@@ -30,16 +32,18 @@ export default function Home() {
   }, []);
   return (
     <div className={styles.page}>
-      {/* <audio ref={audioRef} autoPlay loop muted>
+      <audio ref={audioRef} autoPlay loop muted>
         <source src="/assets/сенин суротун.m4a" type="audio/mp4" />
         Ваш браузер не поддерживает аудио.
-      </audio> */}
+      </audio>
       <Banner />
-      <Hero />
+      <ChatLetter />
+      <HeroVideo />
+      <Slider />
       <Four />
       <HeroAfter />
+      <Hero />
       <HeroBefore />
-      <Slider />
     </div>
   );
 }

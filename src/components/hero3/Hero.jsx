@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="main">
       <Image
-        src="/assets/hero.png"
+        src="/assets/forever.png"
         alt=""
         priority={true}
         width={475}

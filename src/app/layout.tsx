@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Marck_Script } from "next/font/google";
+import HeartEffect from "../ui/HeartEffect";
 import "./globals.css";
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} ${marckScript.className}`}>
         {children}
+        <HeartEffect />
       </body>
     </html>
   );
