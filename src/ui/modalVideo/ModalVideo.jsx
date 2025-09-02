@@ -10,7 +10,13 @@ export default function ModalVideo({ visible, onClose, src }) {
         <button className="close-btn" onClick={onClose}>
           ✖️
         </button>
-        <video src={src} controls autoPlay className="video-player" />
+        <iframe
+          src={src}
+          className="video-player"
+          allow="autoplay"
+          allowFullScreen
+          title="Video"
+        ></iframe>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export default function MemoriesButton() {
       <ModalVideo
         visible={modalVisible}
         onClose={closeModal} // передаем правильную функцию
-        src="/assets/memorchik.mp4"
+        src="https://drive.google.com/file/d/1wJcpS5aiZw3R9UCQ-1uLR9uFk0KJpHEi/preview"
       />
     </div>
   );

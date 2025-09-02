@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <audio ref={audioRef} autoPlay loop muted>
-        <source src="/assets/сенин суротун.m4a" type="audio/mp4" />
+        <source src="/assets/сурот.mp3" type="audio/mpeg" />
         Ваш браузер не поддерживает аудио.
       </audio>
       {showMemory && (

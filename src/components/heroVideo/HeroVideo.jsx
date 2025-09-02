@@ -2,13 +2,12 @@ import "./heroVideo.css";
 export default function HeroVideo() {
   return (
     <div className="main">
-      <video
-        src="/assets/firstvideo.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <iframe
+        src="https://drive.google.com/file/d/12_iqfs3SyvcXe4TRUqSKE6MVnS5R0AJK/preview"
+        width="100%"
+        height="400"
+        allow="autoplay"
+      ></iframe>
     </div>
   );
 }

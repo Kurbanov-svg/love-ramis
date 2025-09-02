@@ -9,7 +9,7 @@ const HeroBefore = () => {
         alt="love me"
         width={475}
         height={630}
-        priority={true}
+        priority={false}
       />
     </div>
   );

@@ -6,7 +6,7 @@ const Hero = () => {
       <Image
         src="/assets/forever.png"
         alt=""
-        priority={true}
+        priority={false}
         width={475}
         height={630}
       />

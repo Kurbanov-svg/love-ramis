@@ -8,7 +8,7 @@ const Four = () => {
         alt=""
         width={475}
         height={630}
-        priority={true}
+        priority={false}
       />
     </div>
   );
