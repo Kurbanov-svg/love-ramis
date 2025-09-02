@@ -51,8 +51,8 @@ export default function Home() {
       <HeroAfter />
       <HeroModalVideo />
       <Hero />
-      <HeroBefore />
       <FooterChat />
+      <HeroBefore />
     </div>
   );
 }
