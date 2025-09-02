@@ -8,9 +8,8 @@ export default function LastChat({ visible, onClose }) {
   const [showTyping, setShowTyping] = useState(false);
 
   const baynurMessage =
-    "Последние дни как будто пустые… Хочется снова быть рядом.";
-  const begimayMessage =
-    "Я тоже хочу быть рядом… Не отпускай меня.";
+    "Последние дни как будто пустые… Хочется снова быть рядом. и делиться моментами вместе.";
+  const begimayMessage = "Я тоже хочу быть рядом… Не отпускай меня.";
 
   useEffect(() => {
     if (!visible) return;
@@ -27,9 +26,9 @@ export default function LastChat({ visible, onClose }) {
       index++;
       if (index === begimayMessage.length) {
         clearInterval(typingInterval);
-        setMessages(prev => [
+        setMessages((prev) => [
           ...prev,
-          { sender: "Бегимай💗", text: begimayMessage }
+          { sender: "Бегимай💗", text: begimayMessage },
         ]);
         setShowTyping(false);
       }
@@ -43,7 +42,9 @@ export default function LastChat({ visible, onClose }) {
   return (
     <div className="chat-overlay">
       <div className="chat-container">
-        <button className="close-btn" onClick={onClose}>✖️</button>
+        <button className="close-btn" onClick={onClose}>
+          ✖️
+        </button>
 
         {messages.map((msg, i) => (
           <div

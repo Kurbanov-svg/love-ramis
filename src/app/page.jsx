@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import Banner from "../components/hero1/Banner";
 import Four from "../components/hero2/Four";
@@ -11,7 +11,9 @@ import HeroVideo from "../components/heroVideo/HeroVideo";
 import ChatLetter from "../components/ChatLetter/ChatLetter";
 import HeroModalVideo from "../components/heroModalVideo/HeroModalVideo";
 import FooterChat from "../components/footerChat/FooterChat";
+import Memory from "../components/memory/Memory";
 export default function Home() {
+  const [showMemory, setShowMemory] = useState(true);
   const audioRef = useRef(null);
   useEffect(() => {
     const enableSound = () => {
@@ -38,6 +40,9 @@ export default function Home() {
         <source src="/assets/сенин суротун.m4a" type="audio/mp4" />
         Ваш браузер не поддерживает аудио.
       </audio>
+      {showMemory && (
+        <Memory onClose={() => setShowMemory(false)} /> // ✅ передаем функцию
+      )}
       <Banner />
       <ChatLetter />
       <HeroVideo />

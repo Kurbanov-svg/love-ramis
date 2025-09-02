@@ -7,7 +7,7 @@ export default function Chat({ visible, onClose }) {
   const [showTyping, setShowTyping] = useState(false); // для левого сообщения
 
   const fullMessage =
-    "Последние дни как будто пустые… Хочется снова быть рядом,и делиться моментами вместе.";
+    "Последние дни как будто пустые… Хочется снова быть рядом, и делиться моментами вместе.";
 
   useEffect(() => {
     if (!visible) return;
