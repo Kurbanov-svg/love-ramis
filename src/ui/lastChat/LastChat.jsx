@@ -4,7 +4,7 @@ import "./lastChat.css";
 
 export default function LastChat({ visible, onClose }) {
   const [messages, setMessages] = useState([]);
-  const [currentText, setCurrentText] = useState(""); // текст, который печатается
+  const [currentText, setCurrentText] = useState("");
   const [showTyping, setShowTyping] = useState(false);
 
   const baynurMessage =
@@ -14,12 +14,10 @@ export default function LastChat({ visible, onClose }) {
   useEffect(() => {
     if (!visible) return;
 
-    // Сразу сообщение Байнура
     setMessages([{ sender: "Байнур", text: baynurMessage }]);
     setCurrentText("");
     setShowTyping(true);
 
-    // Начинаем печатать сообщение Бегимай по буквам
     let index = 0;
     const typingInterval = setInterval(() => {
       setCurrentText(begimayMessage.slice(0, index + 1));
@@ -32,7 +30,7 @@ export default function LastChat({ visible, onClose }) {
         ]);
         setShowTyping(false);
       }
-    }, 100); // скорость печати в мс
+    }, 100);
 
     return () => clearInterval(typingInterval);
   }, [visible]);
@@ -41,11 +39,12 @@ export default function LastChat({ visible, onClose }) {
 
   return (
     <div className="chat-overlay">
-      <div className="chat-container">
-        <button className="close-btn" onClick={onClose}>
-          ✖️
-        </button>
+      {/* Крестик вынесен за пределы контейнера */}
+      <button className="close-btn" onClick={onClose}>
+        ✖️
+      </button>
 
+      <div className="chat-container">
         {messages.map((msg, i) => (
           <div
             key={i}
