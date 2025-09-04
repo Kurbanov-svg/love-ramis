@@ -36,10 +36,10 @@ export default function Home() {
   }, []);
   return (
     <div className={styles.page}>
-      <audio ref={audioRef} autoPlay loop muted>
+      {/* <audio ref={audioRef} autoPlay loop muted>
         <source src="/assets/сурот.mp3" type="audio/mpeg" />
         Ваш браузер не поддерживает аудио.
-      </audio>
+      </audio> */}
       {showMemory && <Memory onClose={() => setShowMemory(false)} />}
       <Banner />
       <ChatLetter />

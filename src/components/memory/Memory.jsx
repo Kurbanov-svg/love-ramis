@@ -1,11 +1,10 @@
-// Memory.jsx
 "use client";
 import { useState, useEffect } from "react";
 import "./memory.css";
 
 export default function Memory({ onClose }) {
   const [open, setOpen] = useState(false);
-  const [showPhoto, setShowPhoto] = useState(false); // новое состояние для показа фото
+  const [showPhoto, setShowPhoto] = useState(false);
   const [hearts, setHearts] = useState([]);
 
   useEffect(() => {
@@ -27,7 +26,6 @@ export default function Memory({ onClose }) {
         ></div>
       ))}
 
-      {/* Кнопка для открытия воспоминания */}
       {!open && (
         <button className="button-green" onClick={() => setOpen(true)}>
           Открыть воспоминание 🎉
@@ -42,13 +40,9 @@ export default function Memory({ onClose }) {
             </button>
             <h2>С Днём Рождения!</h2>
             <p>Счастья, любви и улыбок сегодня и всегда!</p>
-
-            {/* Кнопка для перехода к фоткам */}
           </div>
         </div>
       )}
-
-      {/* После нажатия показываем фотку */}
     </div>
   );
 }
