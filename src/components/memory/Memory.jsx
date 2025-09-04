@@ -1,8 +1,11 @@
+// Memory.jsx
+"use client";
 import { useState, useEffect } from "react";
 import "./memory.css";
 
 export default function Memory({ onClose }) {
   const [open, setOpen] = useState(false);
+  const [showPhoto, setShowPhoto] = useState(false); // новое состояние для показа фото
   const [hearts, setHearts] = useState([]);
 
   useEffect(() => {
@@ -11,7 +14,6 @@ export default function Memory({ onClose }) {
       const left = Math.random() * window.innerWidth;
       setHearts((prev) => [...prev, { id: Date.now(), left, size }]);
     }, 300);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -25,22 +27,28 @@ export default function Memory({ onClose }) {
         ></div>
       ))}
 
-      <button className="button-green" onClick={() => setOpen(true)}>
-        Открыть воспоминание 🎉
-      </button>
+      {/* Кнопка для открытия воспоминания */}
+      {!open && (
+        <button className="button-green" onClick={() => setOpen(true)}>
+          Открыть воспоминание 🎉
+        </button>
+      )}
 
-      {open && (
+      {open && !showPhoto && (
         <div className="modal-overlay">
           <div className="modal-content">
             <button className="close-btn" onClick={onClose}>
               ❌
             </button>
-
             <h2>С Днём Рождения!</h2>
             <p>Счастья, любви и улыбок сегодня и всегда!</p>
+
+            {/* Кнопка для перехода к фоткам */}
           </div>
         </div>
       )}
+
+      {/* После нажатия показываем фотку */}
     </div>
   );
 }

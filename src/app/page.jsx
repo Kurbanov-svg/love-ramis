@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const enableSound = () => {
       if (audioRef.current) {
-        audioRef.current.muted = false;
+        audioRef.current.muted = false; // снимаем mute
         audioRef.current
           .play()
           .catch((e) => console.log("Ошибка воспроизведения:", e));
@@ -42,10 +42,10 @@ export default function Home() {
       </audio>
       {showMemory && <Memory onClose={() => setShowMemory(false)} />}
       <Banner />
-      <Four />
       <ChatLetter />
       <HeroVideo />
       <Slider />
+      <Four />
       <HeroAfter />
       <HeroModalVideo />
       <Hero />
