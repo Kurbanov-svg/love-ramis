@@ -2,7 +2,7 @@
 import "./modalVideo.css";
 
 export default function ModalVideo({ visible, onClose, src }) {
-  if (!visible) return null; // если не видно, ничего не рендерим
+  if (!visible) return null;
 
   return (
     <div className="modal-overlay">

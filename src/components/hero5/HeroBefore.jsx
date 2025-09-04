@@ -5,7 +5,7 @@ const HeroBefore = () => {
   return (
     <div className="main">
       <Image
-        src="/assets/herobefore.png"
+        src="/assets/img5.png"
         alt="love me"
         width={475}
         height={630}

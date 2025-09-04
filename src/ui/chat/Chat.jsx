@@ -37,12 +37,12 @@ export default function Chat({ visible, onClose }) {
       </button>
       <div className="chat-container">
         <div className="chat-message chat-right">
-          <p className="person">Байнур..</p>
+          <p className="person">Рамис..</p>
           <div className="bubble">{message}</div>
         </div>
 
         <div className="chat-message chat-left">
-          <p className="person"> {showTyping ? "Бегимай💗.." : ""}</p>
+          <p className="person"> {showTyping ? "Наргиза💗.." : ""}</p>
           <div className={showTyping ? "bubble typing person" : ""}>
             {showTyping ? "…" : ""}
           </div>
